@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="497.0" prefWidth="850.0" styleClass="background" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employeesmonitor.client.controllers.EmployeeTasksPageController">
+    <TableView layoutX="85.0" layoutY="76.0" prefHeight="350.0" prefWidth="708.0">
+        <columns>
+          <TableColumn prefWidth="120.0" text="Name" />
+          <TableColumn prefWidth="120.0" text="Deadline" />
+          <TableColumn prefWidth="467.0" text="Description" />
+        </columns>
+    </TableView>
+    <Button layoutX="377.0" layoutY="444.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="97.0" text="Remove task" />
+    <Label layoutX="48.0" layoutY="27.0" text="Tasks for employee &lt;firstname&gt; &lt;lastname&gt; (email) " />
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="520.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employeesmonitor.client.controllers.EmployerEmployeesPageController">
+   <children>
+      <TableView fx:id="employeesTableView" layoutX="165.0" layoutY="54.0" prefHeight="350.0" prefWidth="580.0">
+        <columns>
+          <TableColumn fx:id="badgeNumberColumn" prefWidth="120.0" text="Badge Number" />
+          <TableColumn fx:id="firstNameColumn" prefWidth="120.0" text="First Name" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="120.0" text="Last name" />
+            <TableColumn fx:id="startedWorkingColumn" prefWidth="120.0" text="Started working " />
+            <TableColumn fx:id="genderColumn" prefWidth="99.0" text="Gender" />
+        </columns>
+      </TableView>
+      <Button fx:id="addEmployeeButton" layoutX="205.0" layoutY="447.0" mnemonicParsing="false" onAction="#onAddEmployeeButtonClicked" prefHeight="40.0" prefWidth="100.0" text="Add employee" />
+      <Button fx:id="removeEmployeeButton" layoutX="385.0" layoutY="447.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" text="Remove employee" onAction="#onRemoveEmployeeButtonClicked"/>
+      <Button layoutX="585.0" layoutY="447.0" mnemonicParsing="false" onAction="#onViewTasksButtonClicked" prefHeight="40.0" prefWidth="100.0" text="View tasks" />
+   </children>
+</AnchorPane>

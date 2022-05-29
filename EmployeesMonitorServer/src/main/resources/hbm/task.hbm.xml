@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="employeesmonitor.model">
+    <class name="Task"
+           table="tasks">
+
+        <id name="ID" column="id" type="long">
+            <generator class="identity"/>
+        </id>
+
+        <property
+                name="name"
+                column="name"
+        />
+
+        <property
+                name="deadline"
+                column="deadline"
+        />
+
+        <property
+                name="description"
+                column="description"
+        />
+
+        <property name="status"
+                  column="status"
+                  >
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">employeesmonitor.model.TaskStatus</param>
+                <param name = "useNamed">true</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+
+        <many-to-one name="assignedEmployee"
+                     class = "employeesmonitor.model.Employee"
+                     column="employee_id"
+                     not-null="false"
+                     lazy="false"
+        />
+
+        <many-to-one name="taskCreator"
+                     class = "employeesmonitor.model.Employer"
+                     column="creator_id"
+                     not-null="true"
+                     lazy="false"
+        />
+
+    </class>
+</hibernate-mapping>

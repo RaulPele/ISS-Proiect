@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.pelr'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation project(':EmployeesMonitorModel')
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '6.0.0.Final'
+
+}
+
+test {
+    useJUnitPlatform()
+}

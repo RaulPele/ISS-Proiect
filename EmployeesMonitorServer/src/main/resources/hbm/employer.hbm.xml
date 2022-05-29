@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="employeesmonitor.model">
+    <class name="Employer"
+           table="employers">
+
+        <id name="ID" column="id" type="long">
+            <generator class="identity"/>
+        </id>
+
+        <property
+                name="badgeNumber"
+                column="badge_number"
+                generated="always"/>
+
+        <property
+                name="firstName"
+                column="first_name"
+        />
+
+        <property
+                name="lastName"
+                column="last_name"
+        />
+
+        <property
+                name="gender"
+                column="gender"
+        />
+
+       <component
+                name="authCredentials">
+                <property  name="email"
+                           column="email"
+                />
+
+                <property name="password"
+                          column="password"
+                />
+       </component>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,8 @@
+rootProject.name = "EmployeesMonitor"
+include 'EmployeesMonitorModel'
+include 'EmployeesMonitorServer'
+include 'EmployeesMonitorNetworking'
+include 'EmployeesMonitorPersistence'
+include 'EmployeesMonitorServices'
+include 'EmployeesMonitorClient'
+

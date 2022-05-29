@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="520.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employeesmonitor.client.controllers.TasksPageController">
+    <TableView fx:id="tasksTableView" layoutX="59.0" layoutY="49.0" prefHeight="350.0" prefWidth="850.0">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="120.0" text="Name" />
+            <TableColumn fx:id="deadlineColumn" prefWidth="105.0" text="Deadline" />
+         <TableColumn fx:id="statusColumn" prefWidth="94.0" text="Status" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="530.0" text="Description" />
+        </columns>
+    </TableView>
+    <Button fx:id="addTaskButton" layoutX="238.0" layoutY="447.0" mnemonicParsing="false" onAction="#onAddTaskButtonClicked" prefHeight="40.0" prefWidth="100.0" text="Add task" />
+    <Button fx:id="removeTaskButton" layoutX="418.0" layoutY="447.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" text="Remove task" onAction="#onRemoveTaskButtonClicked"/>
+    <Button fx:id="assignTaskButton" layoutX="618.0" layoutY="447.0" mnemonicParsing="false" onAction="#onAssignTaskButtonClicked" prefHeight="40.0" prefWidth="100.0" text="Assign task" />
+</AnchorPane>
